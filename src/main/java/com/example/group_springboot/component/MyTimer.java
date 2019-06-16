@@ -25,5 +25,6 @@ public class MyTimer {
                 }
                 invigilatorDetailService.updateInvigilatorDetail(i);
             });
+
         }
 }
