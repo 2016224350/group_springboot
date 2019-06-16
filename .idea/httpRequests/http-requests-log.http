@@ -1,0 +1,137 @@
+POST http://localhost:8080/api/deliberate
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2019-06-16T105901.200.json
+
+###
+
+GET http://localhost:8080/api/getOnesAll/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-16T105836.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilatorDetail
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "teacher": {
+    "id": 1
+  },
+  "invigilator":{
+    "id": 1
+  },
+  "startTime":"2019-06-22 15:00",
+  "endTime": "2019-06-22 17:00",
+  "allocation": "丹青820"
+}
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilatorDetail
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "teacher": {
+    "id": 1
+  },
+  "invigilator":{
+    "id": 1
+  },
+  "startTime":"2019-06-22 15:00",
+  "endTime": "2019-06-22 17:00",
+  "allocation": "丹青909"
+}
+
+<> 2019-06-16T092659.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "song"
+}
+
+<> 2019-06-16T092633.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "english"
+}
+
+<> 2019-06-16T092551.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "english"
+}
+
+<> 2019-06-16T092521.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "math"
+}
+
+<> 2019-06-16T092503.200.json
+
+###
+
+POST http://localhost:8080/api/adin/addInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "math"
+}
+
+<> 2019-06-16T092436.404.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1001",
+  "password": "1001"
+}
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1001",
+  "password": "1001"
+}
+
+###
+
