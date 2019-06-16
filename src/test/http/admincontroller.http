@@ -1,10 +1,60 @@
-POST http://localhost:8080/api/admin/addteacher
+POST http://localhost:8080/api/admin/teachers
 token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
 Content-Type: application/json
 
 {
-  "number": 1002,
-  "password": 1002
+  "number": 1007,
+  "password": 1007,
+  "name": 1,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
 }
+
+###
+POST http://localhost:8080/api/admin/teachers/3
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "教授",
+  "teacher_detail": "毕业于华清大学",
+  "teacher_phone": "17746113391"
+}
+
+###
+GET http://localhost:8080/api/admin/teachers/aaa/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+###
+GET http://localhost:8080/api/admin/teachers/3/down
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+###
+POST http://localhost:8080/api/admin/tasks
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "title": "缴纳罚款",
+  "content": "报名时间：2019年6月15日至2019年6月19日。报名方式：采取网上报名。",
+  "deadLineTime": "2019-06-19 23:59"
+}
+
+###
+POST http://localhost:8080/api/admin/tasks/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "title": "实验室招聘",
+  "content": "报名时间：2019年6月15日至2019年6月19日。报名方式：采取网上报名。",
+  "deadLineTime": "2019-06-19 23:59"
+}
+
+###
+GET http://localhost:8080/api/admin/tasks/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
 
 ###

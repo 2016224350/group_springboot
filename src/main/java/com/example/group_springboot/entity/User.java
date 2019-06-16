@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Getter
@@ -21,6 +22,7 @@ public class User {
     private String number;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+    @Size(min=2,max=6)
     private String name;
     private String teacher_title;
     private String teacher_detail;
@@ -29,7 +31,7 @@ public class User {
     private int authority = 1;
     // 监考次数,默认为0
     private int teacher_test = 0;
-    @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+    @Column(columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
             updatable = false,
             insertable = false)
     private LocalDateTime insertTime;

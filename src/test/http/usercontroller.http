@@ -1,0 +1,38 @@
+POST http://localhost:8080/api/teacher/detail
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "校长",
+  "teacher_detail": "32岁，毕业于华清大学",
+  "teacher_phone": "17746113311"
+}
+
+###
+POST http://localhost:8080/api/teacher/password
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "password": "1111"
+}
+
+###
+GET http://localhost:8080/api/tasks
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+###
+GET http://localhost:8080/api/tasks/2/taskDetails
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+###
+POST http://localhost:8080/api/tasks/2/reply
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "reply": "收到"
+}
+
+###
