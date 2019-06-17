@@ -14,4 +14,6 @@ public interface UserRepository extends CustomizedRepoistory<User, Integer> {
     //查询最少监考的用户群
     @Query("select u from User u where u.teacher_test = (select min(teacher_test) from User)")
     List<User> findMin();
+    @Query("SELECT u FROM User u")
+    List<User> list();
 }

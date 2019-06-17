@@ -6,14 +6,14 @@ Content-Type: application/json
   "id": 1
 }
 
-<> 2019-06-16T105901.200.json
+<> 2019-06-17T021247.200.json
 
 ###
 
 GET http://localhost:8080/api/getOnesAll/1
 token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
 
-<> 2019-06-16T105836.200.json
+<> 2019-06-17T021243.200.json
 
 ###
 
@@ -33,25 +33,7 @@ Content-Type: application/json
   "allocation": "丹青820"
 }
 
-###
-
-POST http://localhost:8080/api/admin/addInvigilatorDetail
-token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
-Content-Type: application/json
-
-{
-  "teacher": {
-    "id": 1
-  },
-  "invigilator":{
-    "id": 1
-  },
-  "startTime":"2019-06-22 15:00",
-  "endTime": "2019-06-22 17:00",
-  "allocation": "丹青909"
-}
-
-<> 2019-06-16T092659.200.json
+<> 2019-06-17T021238.200.json
 
 ###
 
@@ -63,75 +45,517 @@ Content-Type: application/json
   "name": "song"
 }
 
+<> 2019-06-17T021222.200.json
+
+###
+
+GET http://localhost:8080/api/getAllInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T021218.200.json
+
+###
+
+POST http://localhost:8080/api/tasks/2/reply
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "reply": "收到"
+}
+
+<> 2019-06-17T021210.500.json
+
+###
+
+GET http://localhost:8080/api/tasks/2/taskDetails
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+<> 2019-06-17T021207.200.json
+
+###
+
+GET http://localhost:8080/api/tasks
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+<> 2019-06-17T021203.200.json
+
+###
+
+GET http://localhost:8080/api/tasks
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+<> 2019-06-17T021157.200.json
+
+###
+
+POST http://localhost:8080/api/teacher/password
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "password": "1002"
+}
+
+<> 2019-06-17T021152.200.json
+
+###
+
+POST http://localhost:8080/api/teacher/password
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "password": "1111"
+}
+
+<> 2019-06-17T021137.200.json
+
+###
+
+POST http://localhost:8080/api/teacher/detail
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "校长",
+  "teacher_detail": "32岁，毕业于华清大学",
+  "teacher_phone": "17746113311"
+}
+
+<> 2019-06-17T021132.200.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1002",
+  "password": "1002"
+}
+
+###
+
+GET http://localhost:8080/api/admin/tasks/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T021111.200.json
+
+###
+
+POST http://localhost:8080/api/admin/tasks
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "title": "缴纳罚款",
+  "content": "报名时间：2019年6月15日至2019年6月19日。报名方式：采取网上报名。",
+  "deadLineTime": "2019-06-19 23:59"
+}
+
+<> 2019-06-17T021104.200.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/3/down
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T021055.200.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/"李音"/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+###
+
+GET http://localhost:8080/api/admin/teachers/李音/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T021023.400.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers/3
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "教授",
+  "teacher_detail": "毕业于华清大学",
+  "teacher_phone": "17746113391"
+}
+
+<> 2019-06-17T020946.200.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1003,
+  "password": 1003,
+  "name": "李音",
+  "teacher_title": "讲师",
+  "teacher_detail": "2005年，毕业于大连理工大学",
+  "teacher_phone": "17046113592"
+}
+
+<> 2019-06-17T020935.200.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1002,
+  "password": 1002,
+  "name": "李静",
+  "teacher_title": "讲师",
+  "teacher_detail": "2005年，毕业于东北大学",
+  "teacher_phone": "17646113392"
+}
+
+<> 2019-06-17T020843.200.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1002",
+  "password": "1002"
+}
+
+<> 2019-06-17T020836.401.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1001",
+  "password": "1001"
+}
+
+###
+
+POST http://localhost:8080/api/teacher/password
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "password": "1111"
+}
+
+<> 2019-06-17T015444.200.json
+
+###
+
+POST http://localhost:8080/api/teacher/detail
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "校长",
+  "teacher_detail": "32岁，毕业于华清大学",
+  "teacher_phone": "17746113311"
+}
+
+<> 2019-06-17T015441.200.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1002",
+  "password": "1111"
+}
+
+<> 2019-06-17T015430.401.json
+
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "number": "1001",
+  "password": "1001"
+}
+
+###
+
+GET http://localhost:8080/api/getAllInvigilator
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T015412.200.json
+
+###
+
+GET http://localhost:8080/api/admin/tasks/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T015403.200.json
+
+###
+
+POST http://localhost:8080/api/admin/tasks/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "title": "实验室招聘",
+  "content": "报名时间：2019年6月15日至2019年6月19日。报名方式：采取网上报名。",
+  "deadLineTime": "2019-06-19 23:59"
+}
+
+<> 2019-06-17T015357.200.json
+
+###
+
+POST http://localhost:8080/api/admin/tasks
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "title": "缴纳罚款",
+  "content": "报名时间：2019年6月15日至2019年6月19日。报名方式：采取网上报名。",
+  "deadLineTime": "2019-06-19 23:59"
+}
+
+<> 2019-06-17T015349.200.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/3/down
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T015343.200.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/aaa/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-17T015336.400.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers/3
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "教授",
+  "teacher_detail": "毕业于华清大学",
+  "teacher_phone": "17746113391"
+}
+
+<> 2019-06-17T015324.200.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1008,
+  "password": 1008,
+  "name": 123,
+  "teacher_title": "讲师",
+  "teacher_detail": "2014年，毕业于华清大学",
+  "teacher_phone": "17646113392"
+}
+
+<> 2019-06-17T015318.200.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1007,
+  "password": 1007,
+  "name": 123,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
+}
+
+<> 2019-06-17T015252.200.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers/3
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "章远",
+  "teacher_title": "教授",
+  "teacher_detail": "毕业于华清大学",
+  "teacher_phone": "17746113391"
+}
+
+<> 2019-06-17T015202.500.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1007,
+  "password": 1007,
+  "name": 1,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
+}
+
+<> 2019-06-17T015112.400.json
+
+###
+
+POST http://localhost:8080/api/deliberate
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2019-06-16T105901.200.json
+
+###
+
+GET http://localhost:8080/api/getOnesAll/1
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-16T105836.200.json
+
+###
+
+POST http://localhost:8080/api/admin/addInvigilatorDetail
+  "number": 1007,
+  "password": 1007,
+  "name": 1,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
+}
+
+<> 2019-06-16T093938.400.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1007,
+  "password": 1007,
+  "name": 15,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
+}
+
+<> 2019-06-16T093917.400.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/aaa/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-16T093902.400.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/aaa/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-16T092951.400.json
+
+###
+
+GET http://localhost:8080/api/admin/teachers/aaa/up
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+
+<> 2019-06-16T092408.400.json
+
+###
+
+POST http://localhost:8080/api/admin/teachers
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "number": 1007,
+  "password": 1007,
+  "name": 15,
+  "teacher_title": "讲师",
+  "teacher_detail": "2012年，毕业于华清大学",
+  "teacher_phone": "17746113392"
+}
+
+<> 2019-06-16T092334.200.json
+
+###
+
+GET http://localhost:8080/api/tasks/2/taskDetails
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+###
+
+GET http://localhost:8080/api/tasks/2/taskDetails
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+
+<> 2019-06-16T090812.200.json
+
+###
+
+POST http://localhost:8080/api/tasks/2/reply
+token: 1e6c8d8839488a54b2be9850f3c8e70764efb2ca626467b3bf707e090e8d4af75e7a43d54c389307982077d81cf969f8
+Content-Type: application/json
+
+{
+  "reply": "收到"
+}
+
+<> 2019-06-16T090749.200.json
+
+###
+
+POST http://localhost:8080/api/admin/tasks
+token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
+Content-Type: application/json
+
+{
+  "name": "song"
+}
+
 <> 2019-06-16T092633.200.json
-
-###
-
-POST http://localhost:8080/api/admin/addInvigilator
-token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
-Content-Type: application/json
-
-{
-  "name": "english"
-}
-
-<> 2019-06-16T092551.200.json
-
-###
-
-POST http://localhost:8080/api/admin/addInvigilator
-token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
-Content-Type: application/json
-
-{
-  "name": "english"
-}
-
-<> 2019-06-16T092521.200.json
-
-###
-
-POST http://localhost:8080/api/admin/addInvigilator
-token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
-Content-Type: application/json
-
-{
-  "name": "math"
-}
-
-<> 2019-06-16T092503.200.json
-
-###
-
-POST http://localhost:8080/api/adin/addInvigilator
-token: 5d44d71a19a0f46a3ff148124c3e35b796d4c4c77d9f35fc89a10a376ebeb5ba5249fb887534705ec476db3180df9ac8
-Content-Type: application/json
-
-{
-  "name": "math"
-}
-
-<> 2019-06-16T092436.404.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "number": "1001",
-  "password": "1001"
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "number": "1001",
-  "password": "1001"
-}
 
 ###
 

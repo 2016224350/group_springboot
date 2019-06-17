@@ -34,7 +34,7 @@ public class LoginController {
         Optional.ofNullable(userService.getUser(user.get("number")))
                 .ifPresentOrElse(u -> {
                     if (!passwordEncoder.matches(user.get("password"), u.getPassword())) {
-                        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
+                        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "密码错误");
                     }
                     Map map = Map.of("uid", u.getId(), "aid", u.getAuthority());
                     // 生成加密token
@@ -49,7 +49,7 @@ public class LoginController {
                     }
                     response.setHeader("role", role);
                 }, () -> {
-                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
+                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名错误");
                 });
     }
 }
